@@ -1,0 +1,537 @@
+/* Color Palette: https://colorhunt.co/palette/6096b493bfcfbdcdd6eee9da */
+
+/*
+class --> .
+id --> #
+*/
+
+
+/* search Google Fonts, search Nurito Sans, select ExtraLight 200, Light300, Regular400, SemiBold600
+   then select @import and copy the code to embed a font. */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap');
+
+
+:root {  /* `:` is the pseudo-class selector in CSS. Pseudo-classes are used to select elements based on a 
+            specific state or condition that is not represented by normal HTML attributes. They are used to target elements in various states.
+            It allows you to define CSS variables or global styles that can be accessed and used throughout the document.
+            In this case, the `:root` selector targets the root element of the HTML document, 
+            and this `:root` selector is used to define a CSS variable named `--yellow` with a value of `#f9ca24`  */
+    --lightpeach: #EEE9DA; /* --yellow:#f9ca24; */
+}  /* Using `:root` selector to define CSS variables at the root level allows you to centralize and reuse common values throughout your stylesheets, 
+      making it easier to maintain and update them. 
+      Pseudo-classes allow you to apply specific styles to elements based on their states or positions within the document structure. 
+      They provide a way to select and style elements dynamically, without the need for JavaScript or user interaction. */
+
+
+*{  /* `*` is the Universal Selector or Wildcard Selector, the `*` selector matches any element in the HTML document. 
+       It selects all elements in the HTML document, and can be used to apply styles globally. */
+    font-family: 'Nunito Sans', sans-serif;  /* CSS rules to specify families */
+    margin:0; padding:0;  /* The `*` selects all elements and sets the `margin` and `padding` properties to `0`, 
+                             effectively resetting the default margins and paddings. */
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {  /* Both `*::` and `*:` are Invalid selectors and does not have any specific meaning in CSS. 
+                   It must be combined with a valid pseudo-classes or pseudo-element selector, such as `::selection` to work properly.
+                   In this case, the `*::selection` targets the pseudo-element `::selection` on all elements 
+                   and sets the `background` property
+                   */
+    /* background: var(--yellow);  type --yellow and press enter */
+    background: var(--lightpeach);  /* type --lightpeach and press enter */
+    color: #333;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden; /* This CSS property is used to control the overflow behavior horizontally (along the x-axis) of an element's content within its container.
+                           When applied to an element, `overflow-x: hidden;` will hide any content that exceeds the width of the element's container along the horizontal axis. 
+                           This means that if the content is wider than the container, it will be clipped and not visible to the user. No scrollbars will appear, 
+                           and the user will not be able to scroll horizontally to view the hidden content. 
+                           This CSS property ensures that any content that exceends the width of the element's container is hidden, 
+                           preventing horizontal scrolling and clipping the content that goes beyond the container's boundaries. */
+}
+
+html::-webkit-scrollbar {  /* type html::scrollbar and press enter */
+    width: 1.4rem;  /* `rem` stands for "root em", it is a unit of measurement relative to the root element's font size. 
+                        The root element is typically the `<html>` element of the webpage.
+                        The rem unit is useful for creating scalable and responsive designs because it takes into account the user's preferred font size, 
+                        which can be adjusted in the browser settings.
+                        In the context of width: 1.4rem;, it means that the width of the element will be 1.4 times the font size of the root element. 
+                        For example, if the root element's font size is set to 16px, then 1rem would be equal to 16px. Therefore, 1.4rem would be 22.4px (1.4 * 16px).
+                        By using rem units, you can maintain consistent proportions across different devices and ensure that the element's size adjusts 
+                        based on the user's preferred font size. It's a flexible unit that helps in creating responsive and accessible designs.
+
+However,  when applied to the webkit-scrollbar width, it refers to the width of the scrollbar in the browser's user interface rather than the width of an HTML element.
+By setting the webkit-scrollbar width to 1.4rem, it means that the width of the scrollbar will be 1.4 times the font size of the root element. 
+For example, if the root element's font size is set to 16px, then 1rem would be equal to 16px. Therefore, 1.4rem would be 22.4px (1.4 * 16px).
+Using rem units for the webkit-scrollbar width allows you to make the scrollbar wider or narrower relative to the root element's font size. 
+This can be useful for customizing the appearance of scrollbars to fit your design preferences. */
+}
+
+html::-webkit-scrollbar-track {  /* type html::scrollbartrack */
+    background: #213555;
+}
+
+html::-webkit-scrollbar-thumb {  
+    background: var(--lightpeach);  /* background: var(--yellow); */
+}
+
+body {
+    background: #93BFCF;  /* background: #111; */
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn {
+    padding: 0.7rem 3rem;  /* padding: .7rem 3rem; */
+    background: #6096B4;
+    color: aliceblue;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i {
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover {
+    background: #364f77; 
+    color: aliceblue;
+}
+
+.heading {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: aliceblue;
+}
+
+.heading span {
+    color: var(--lightpeach);
+}
+
+.heading p {
+    color: #364f77;
+    font-size: 2.5rem;
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #213555;  /* background: #1a1a1a; */
+    display: flex;  /* This property value establishes/creates a flex container, allowing you to create flexible and responsive layouts. 
+                       It turns the element into a flex container and enables the use of flexbox properties on its child elements.
+                       Flexbox provides powerful capabilities for distributing space among child elements, aligning them, and controlling their order.
+                       It is particularly useful for creating responsive designs with flexible and adpative layouts. */
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img {  /* `header .user img {}` is targeting `<img>` elements specifically when they are nested inside an element with the class `.user`, 
+                        which in turn is nested inside a `<header>` element */
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .7rem solid var(--lightpeach);  /* border: .7rem solid var(--yellow); */
+}
+
+header .user .name {
+    font-size: 3.5rem;
+    color: #EEE9DA;  /* color: #fff; */
+}
+
+header .user .post {
+    font-size: 2rem;
+    color: #EEE9DA;  /* color: #fff; */
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar ul {
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #BDCDD6;  
+    color: #213555;  
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+    background: #6096B4; 
+    color: aliceblue;
+}
+
+#menu {
+    position: fixed;
+    top: 2rem; right: 2rem;
+    background: #213555;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;  /* padding: (up/down space) (left/right space); */
+    z-index: 1000;
+    display: none;  /* This property value hides the element completely from the layout and makes it invisible
+                       The element's space is removed, and it does affect the surrounding elements.
+                       Essentially, it is as if the element doesn't exist in the document.
+                       This is commonly used when you want to hide an element dynamically based on certain conditions or user interactions. */
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.home h3 {
+    font-size: 2.5rem;
+    color: #213555;
+}
+
+.home h1 {
+    font-size: 5rem;
+    color: #213555;
+}
+
+.home h1 span {
+    color: var(--lightpeach);
+}
+
+.home p {
+    font-size: 2rem;
+    color: #364f77;
+    padding: 1rem 0;
+    text-align: justify;
+    text-transform: none;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.about .row .info {
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3 { 
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem 0;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.about .row .info h3 span {
+    color: var(--lightpeach);
+    padding: 0 .5rem;
+}
+
+.about .row .counter {
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box { 
+    width: 20rem;
+    background: #BDCDD6;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .counter .box span { 
+    font-size: 4rem;
+    color: var(--lightpeach);
+}
+
+.about .row .counter .box h3 { 
+    font-size: 2rem;
+    color: #364f77;
+    text-transform: none;
+}
+
+.education .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box {
+    width: 27rem;
+    margin: 4rem 1rem;  /* margin: (top-bottom) (right-left); */
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;  /* The element is positioned relative to its normal position in the document flow. 
+                            The element is not taken out of the normal flow, so it will affect the positioning of other elements. 
+                            With `position: relative;`, you can use the top, right, bottom, 
+                            and left properties to offset the element from its normal position. */
+}
+
+.education .box-container .box span {
+    font-size: 1.8rem;
+    background: #6096B4;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.2rem;
+    /* transition: all 0.3s ease; */
+}
+
+
+.education .box-container .box h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    padding-top: 1.5rem;  /* type ptop + tab */
+}
+
+.education .box-container .box ul li {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--lightpeach);
+    padding: 2rem 0.1;
+}
+
+.education .box-container .box i {
+    position: absolute;  /* The element is positioned relative to its nearest positioned ancestor (an ancestor with a position other than `static`) 
+                            or the initial containing block if there is no positioned ancestor. 
+                            The element is also removed from the normal document flow. When using `position: absolute;`, 
+                            you can specify the top, right, bottom, and left properties to control the exact positioning of the element. */
+    top: -1.5rem; left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #93BFCF;
+    background: var(--lightpeach);
+}
+
+.project .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.project .box-container .box{ 
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project .box-container .box:hover img {
+    transform: scale(1.2);
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3 {
+    display: flex;
+    text-transform: none;
+    align-items: center;
+    font-size: 2rem;
+    color: #213555;  /* color: #eee */
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i {
+    padding-right: 1rem;
+    color: #364f77;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;  /* type mrbo + tab */
+}
+
+.contact .row form .box {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #1c1f2433;
+    color: var(--lightpeach);
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+.contact .row form .box::placeholder {
+    text-transform: capitalize; 
+}
+
+.contact .row form .message {
+    height: 15rem;
+    resize: none;
+}
+
+.top {
+    position: fixed;  /* The element is positioned relative to the browser window's viewport, regardless of scrolling.
+                         The element will stay in the same position even when the user scrolls the page. 
+                         The element is removed from the normal document flow, and other elements may occupy the space it would have taken. */
+    bottom: 0.8rem; right: 0.8rem;
+    z-index: 100;  /* This CSS property controls the stacking order of positioned elements. 
+                      It's value determines the depth of the element in the stacking context, which determines which elements are visually stacked on top of each other.
+                      It is commonly used in situations where elements overlap or need to be layered.  */
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries
+
+Media queries in CSS allow you to apply different styles to elements based on the characteristics of the device or viewport.
+In this case, the code block applies specific styles when the viewport width is within certain ranges.
+Media queries allow you to create responsive designs by adapting the styles based on the viewport size or device capabilities.
+They provide a way to optimize the layout and appearance of your website for different screen sizes and devices. */
+@media (max-width: 1200px) {  /* This media query targets viewports with a maximum width of 1200 pixels */
+
+    html {
+        font-size: 55%;
+        /* When the viewport width is within this range(max-width: 1200px), the `font-size` of the `html` element is set to `55%`.
+           This can be useful for adjusting the overall font size on smaller screens. */
+    }
+
+    .home {  /* OR #home {} */
+        padding: 1rem 4rem;
+    }
+
+}
+
+@media (max-width: 991px) {  /* This media query targets viewports with a maximum width of 991 pixels */
+
+    header {
+        left:-120%;
+        /* When the viewport width is within this range(max-width: 991px), the `header` element has its `left` property set to `-120%`.
+           This can be used to move the header element off-screen or adjust its position. */
+    }
+
+    #menu {
+        display: block;  /* This property value defines/makes the element as a block-level element, taking up the full width available within their parent container and starting on a new line 
+                           They have a line break before and after the element. Examples of block-level elements are `<div>`, `<p>`, `<h1>` to `<h6>`, and `<section>`. */
+        /* When the viewport width is within this range(max-width: 991px), the element with the `id` of `menu` has its `display` property set to `block`.
+           This can be used to make the menu element visible or change its display behavior. */
+    }
+
+    header.toggle {
+        left:0%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 50%;
+    }  
+}
+
+
+@media (max-width: 400px) {
+
+    header {
+        width: 100vw;
+    }    
+
+    .heading {
+        margin: 0 3rem;
+    }
+
+    .about .row .counter .box {
+        width: 100%;
+    }
+
+    .education .box-container .box {
+        width: 100%;
+    }
+
+    .project .box-container .box {
+        width: 100%;
+    }
+
+    .contact .row form {
+        margin: 3rem 0;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working in Progress</title>
+
+    <style>
+        html, body {
+            background-color: black;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* center the image horizontally */
+            /* This property is used to horizontally align the flex items along the main axis of the flex container. 
+            The main axis is determined by the `flex-direction` property, which by default is set to `row`. 
+            When `justify-content: center;` is applied, the flex items are centered horizontally within the container. */
+            align-items: center;  /* center the image vertically */
+            /* This property is used to vertically align the flex items along the cross axis of the flex container. 
+            The cross axis is perpendicular to the main axis. By default, the cross axis aligns items vertically when the `flex-direction` is set to `row`. 
+            When `align-items: center;` is applied, the flex items are centered vertically within the container. */
+        }
+
+        .center-image {
+            position: absolute;
+            width: 790px;
+            height: 690px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* img {
+            display: block;
+            margin: 0 auto;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div class="center-image">
+        <img src="images/img17.jpg" alt="image">
+    </div>
+</body>
+</html>
